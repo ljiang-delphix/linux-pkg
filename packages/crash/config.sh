@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2021 Delphix
+# Copyright 2019 Delphix
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# shellcheck disable=SC2034
 
-DEFAULT_PACKAGE_GIT_URL="https://github.com/delphix/docker-python-image.git"
-DEFAULT_PACKAGE_VERSION="1.0.0"
+# shellcheck disable=SC2034
+DEFAULT_PACKAGE_GIT_URL="https://github.com/delphix/crash.git"
+DEFAULT_PACKAGE_VERSION=1.0.0
+
+UPSTREAM_GIT_URL="https://github.com/crash-utility/crash.git"
+UPSTREAM_GIT_BRANCH="master"
 
 function prepare() {
 	logmust install_build_deps_from_control_file
@@ -25,4 +28,8 @@ function prepare() {
 
 function build() {
 	logmust dpkg_buildpackage_default
+}
+
+function update_upstream() {
+	logmust update_upstream_from_git
 }

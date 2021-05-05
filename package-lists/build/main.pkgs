@@ -7,18 +7,17 @@ bcc
 bpftrace
 challenge-response
 cloud-init
+crash
 crash-python
 crypt-blowfish
 delphix-platform
 delphix-sso-app
 drgn
-docker-python-image
 gdb-python
 grub2
 libkdumpfile
 make-jpkg
 makedumpfile
-masking
 misc-debs
 nfs-utils
 performance-diagnostics
@@ -28,4 +27,3 @@ recovery-environment
 savedump
 sdb
 targetcli-fb
-virtualization
